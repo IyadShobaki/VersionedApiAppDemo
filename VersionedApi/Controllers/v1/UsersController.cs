@@ -1,16 +1,20 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Asp.Versioning;
+using Microsoft.AspNetCore.Mvc;
 
-namespace VersionedApi.Controllers;
+namespace VersionedApi.Controllers.v1;
 
-[Route("api/[controller]")]
+
+[Route("api/v1/[controller]")]
 [ApiController]
+[ApiVersion("1.0")]
+
 public class UsersController : ControllerBase
 {
-   // GET: api/<UsersController>
+   // GET: api/v1/Users
    [HttpGet]
    public IEnumerable<string> Get()
    {
-      return new string[] { "value1", "value2" };
+      return new string[] { "Version 1 Value 1", "Version 1 Value 2" };
    }
 
    // GET api/<UsersController>/5
