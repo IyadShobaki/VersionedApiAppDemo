@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace VersionedApi.Controllers.v1;
 
 
-[Route("api/v1/[controller]")]
+[Route("api/v{version:apiVersion}/[controller]")]
 [ApiController]
 [ApiVersion("1.0")]
 
